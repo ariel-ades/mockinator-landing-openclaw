@@ -1,0 +1,39 @@
+/* ── CTA STRIP ─────────────────────────────────────── */
+.cta-strip {
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-16) var(--space-10);
+  text-align: center;
+}
+.cta-strip::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(0, 212, 255, 0.12), transparent 65%);
+}
+.cta-strip h2 {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 5vw, 60px);
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+.cta-strip p {
+  position: relative;
+  z-index: 1;
+  max-width: 480px;
+  margin: 16px auto 40px;
+  color: var(--txt-2);
+  font-size: 18px;
+}
+.cta-email {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.cta-meta { margin-top: 16px; color: var(--txt-3); font-size: 13px; }

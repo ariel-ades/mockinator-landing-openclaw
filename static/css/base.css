@@ -1,0 +1,74 @@
+/* ── BASE / RESETS / GLOBALS ───────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--txt-1);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.5;
+}
+a { color: inherit; }
+button, input, textarea, select { font: inherit; }
+section, nav, footer, main { position: relative; z-index: 1; }
+.container { max-width: var(--container); margin: 0 auto; }
+.container-wide { max-width: var(--container-wide); margin: 0 auto; }
+.section { padding: var(--space-16) var(--space-10); }
+.section-shell { max-width: var(--container); margin: 0 auto; }
+.section-full { padding: var(--space-16) var(--space-10); }
+.grid-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--cyan-dim) 1px, transparent 1px),
+    linear-gradient(90deg, var(--cyan-dim) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.eyebrow {
+  display: block;
+  margin-bottom: var(--space-4);
+  color: var(--cyan);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.section-title {
+  color: var(--txt-1);
+  font-family: var(--font-heading);
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1.1;
+}
+.section-sub {
+  max-width: 620px;
+  margin-top: var(--space-4);
+  color: var(--txt-2);
+  font-size: 17px;
+  line-height: 1.7;
+}
+.fade-up { animation: fadeUp var(--duration-slow) var(--ease-out) both; }
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.55s; }
+.delay-6 { animation-delay: 0.7s; }
+.cursor { animation: blink 1s step-end infinite; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes blink { 50% { opacity: 0; } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+@keyframes spin { to { transform: rotate(360deg); } }

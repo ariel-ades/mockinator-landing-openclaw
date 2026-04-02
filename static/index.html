@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mockinator — Mock APIs in Seconds</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/problem.css" />
+  <link rel="stylesheet" href="css/before-after.css" />
+  <link rel="stylesheet" href="css/how-it-works.css" />
+  <link rel="stylesheet" href="css/demo.css" />
+  <link rel="stylesheet" href="css/features.css" />
+  <link rel="stylesheet" href="css/comparison.css" />
+  <link rel="stylesheet" href="css/security.css" />
+  <link rel="stylesheet" href="css/pricing.css" />
+  <link rel="stylesheet" href="css/faq.css" />
+  <link rel="stylesheet" href="css/cta.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/modal.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a class="nav-logo" href="#">
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="36" height="36" rx="9" fill="#0C1220"/>
+      <rect width="36" height="36" rx="9" fill="url(#logo-grad)" opacity=".15"/>
+      <circle cx="18" cy="10" r="2.5" fill="#00D4FF"/>
+      <circle cx="10" cy="22" r="2.5" fill="#00FFB2"/>
+      <circle cx="26" cy="22" r="2.5" fill="#00D4FF"/>
+      <circle cx="18" cy="18" r="3" fill="url(#logo-center)"/>
+      <line x1="18" y1="12.5" x2="18" y2="15" stroke="#00D4FF" stroke-width="1.5" stroke-opacity=".7"/>
+      <line x1="12" y1="21" x2="15.1" y2="19.1" stroke="#00FFB2" stroke-width="1.5" stroke-opacity=".7"/>
+      <line x1="24" y1="21" x2="20.9" y2="19.1" stroke="#00D4FF" stroke-width="1.5" stroke-opacity=".7"/>
+      <circle cx="18" cy="18" r="15" stroke="url(#logo-ring)" stroke-width="1" stroke-dasharray="3 3"/>
+      <defs>
+        <linearGradient id="logo-grad" x1="0" y1="0" x2="36" y2="36">
+          <stop offset="0%" stop-color="#00D4FF"/>
+          <stop offset="100%" stop-color="#00FFB2"/>
+        </linearGradient>
+        <radialGradient id="logo-center" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#00FFB2"/>
+          <stop offset="100%" stop-color="#00A3C8"/>
+        </radialGradient>
+        <linearGradient id="logo-ring" x1="0" y1="0" x2="36" y2="36">
+          <stop offset="0%" stop-color="#00D4FF" stop-opacity=".4"/>
+          <stop offset="100%" stop-color="#00FFB2" stop-opacity=".2"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    <span>Mockinator</span>
+  </a>
+
+  <div class="nav-links">
+    <a href="#how">How it works</a>
+    <a href="#features">Features</a>
+    <a href="#compare">Compare</a>
+    <a href="#pricing">Pricing</a>
+  </div>
+
+  <div class="nav-cta">
+    <a href="#" class="btn-ghost is-disabled" aria-disabled="true" tabindex="-1">Sign in</a>
+    <a href="#" class="btn-primary js-open-subscribe-modal">Get started free →</a>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="grid-bg"></div>
+
+  <div class="hero-badge fade-up">
+    <span class="dot"></span>
+    Now in public beta
+  </div>
+
+  <h1 class="fade-up delay-1">
+    Mock APIs that think.<br /><em>Ship faster.</em> Every time.
+  </h1>
+
+  <p class="hero-sub fade-up delay-2">
+    Describe an endpoint. Get a live URL, realistic LLM-generated data, and JSON Schema validation — in under 30 seconds. No config files. No local servers.
+  </p>
+
+  <div class="hero-actions fade-up delay-3">
+    <a href="#" class="btn-hero js-open-subscribe-modal">
+      <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="#000" stroke-width="2.5" stroke-linejoin="round"/></svg>
+      Start mocking free
+    </a>
+    <a href="#how" class="btn-hero-ghost">
+      <svg width="17" height="17" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polygon points="10,8 16,12 10,16" fill="currentColor"/></svg>
+      See how it works
+    </a>
+  </div>
+
+  <div class="hero-terminal fade-up delay-4">
+    <div class="terminal-bar">
+      <span class="terminal-dot danger"></span>
+      <span class="terminal-dot warning"></span>
+      <span class="terminal-dot success"></span>
+      <div class="url-bar">
+        <span class="lock">🔒</span>
+        <span>api.mockinator.io/<span id="slug" class="inline-cyan">your-project</span>/users</span>
+      </div>
+      <div class="terminal-bar-actions">
+        <span class="badge-method badge-get">GET</span>
+        <span class="t-status"><span class="status-dot"></span><span class="status-text">200 OK</span></span>
+      </div>
+    </div>
+
+    <div class="terminal-body">
+      <div>
+        <div class="t-col-label">→ LLM-Generated Response</div>
+        <div class="t-code">
+          <span class="t-punct">{</span><br />
+          &nbsp;&nbsp;<span class="t-key">"id"</span><span class="t-punct">:</span> <span class="t-num">42</span><span class="t-punct">,</span><br />
+          &nbsp;&nbsp;<span class="t-key">"name"</span><span class="t-punct">:</span> <span class="t-str">"Sarah Okonkwo"</span><span class="t-punct">,</span><br />
+          &nbsp;&nbsp;<span class="t-key">"email"</span><span class="t-punct">:</span> <span class="t-str">"s.okonkwo@acme.io"</span><span class="t-punct">,</span><br />
+          &nbsp;&nbsp;<span class="t-key">"role"</span><span class="t-punct">:</span> <span class="t-str">"admin"</span><span class="t-punct">,</span><br />
+          &nbsp;&nbsp;<span class="t-key">"verified"</span><span class="t-punct">:</span> <span class="t-bool">true</span><span class="t-punct">,</span><br />
+          &nbsp;&nbsp;<span class="t-key">"created_at"</span><span class="t-punct">:</span> <span class="t-str">"2024-11-02T09:14:00Z"</span><br />
+          <span class="t-punct">}</span>
+        </div>
+      </div>
+      <div>
+        <div class="t-col-label">✓ JSON Schema Validation</div>
+        <div class="t-code">
+          <span class="t-punct">{</span><br />
+          &nbsp;&nbsp;<span class="t-key">"type"</span><span class="t-punct">:</span> <span class="t-str">"object"</span><span class="t-punct">,</span><br />
+          &nbsp;&nbsp;<span class="t-key">"required"</span><span class="t-punct">:</span> <span class="t-punct">[</span><span class="t-str">"id"</span><span class="t-punct">,</span> <span class="t-str">"email"</span><span class="t-punct">],</span><br />
+          &nbsp;&nbsp;<span class="t-key">"properties"</span><span class="t-punct">: {</span><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-key">"email"</span><span class="t-punct">:</span> <span class="t-punct">{</span> <span class="t-key">"format"</span><span class="t-punct">:</span> <span class="t-str">"email"</span> <span class="t-punct">},</span><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-key">"role"</span><span class="t-punct">:</span> <span class="t-punct">{</span> <span class="t-key">"enum"</span><span class="t-punct">:</span> <span class="t-punct">[</span><span class="t-str">"admin"</span><span class="t-punct">,</span> <span class="t-str">"user"</span><span class="t-punct">]</span> <span class="t-punct">}</span><br />
+          &nbsp;&nbsp;<span class="t-punct">}</span><br />
+          <span class="t-punct">}</span><span class="cursor inline-cyan">▋</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROBLEM SECTION ── -->
+<section class="section">
+  <div class="section-shell">
+    <span class="eyebrow">// Problem</span>
+    <h2 class="section-title">Every new feature hits the same wall.</h2>
+    <p class="section-sub">Mock wiring sounds temporary until it becomes the thing the whole team waits on, reworks, and repeats every sprint.</p>
+
+    <div class="problem-grid">
+      <article class="problem-card">
+        <div class="problem-icon">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M16 11c1.66 0 3-1.79 3-4s-1.34-4-3-4-3 1.79-3 4 1.34 4 3 4ZM8 11c1.66 0 3-1.79 3-4S9.66 3 8 3 5 4.79 5 7s1.34 4 3 4ZM8 13c-2.67 0-8 1.34-8 4v2h10M16 13c-.29 0-.62.02-.97.05 1.16.84 1.97 1.98 1.97 3.45V19h7v-2c0-2.66-5.33-4-8-4Z" stroke="#FFB800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Everyone is blocked</h3>
+        <p>PMs can't review. QA can't test. Designers can't prototype. Everyone is waiting on someone else's local environment before the work can even move.</p>
+      </article>
+      <article class="problem-card">
+        <div class="problem-icon">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h7" stroke="#FFB800" stroke-width="2" stroke-linecap="round"/><path d="M18 14l3 3-3 3" stroke="#FFB800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>The contract drifts</h3>
+        <p>Frontend, backend, and mobile each tweak their own local mock. By week 2, nobody agrees on the same API shape or the same response behavior.</p>
+      </article>
+      <article class="problem-card">
+        <div class="problem-icon">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.708" stroke="#FFB800" stroke-width="2" stroke-linecap="round"/><path d="M3 4v4h4" stroke="#FFB800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>It repeats every sprint</h3>
+        <p>This isn't a one-time tax. Every new feature restarts the cycle — same pain, same lost hours, same blocked team trying to fake an API again.</p>
+      </article>
+    </div>
+
+    <div class="problem-stat">
+      <strong>$36K+ per team, per year wasted on mock wiring alone</strong>
+      <p>That cost shows up in stalled reviews, duplicate mock setup, broken contracts, and engineers doing integration work twice before real APIs are ready.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── BEFORE / AFTER ── -->
+<section class="section">
+  <div class="section-shell">
+    <span class="eyebrow">// Before / After</span>
+    <h2 class="section-title">Stop faking the same infrastructure twice.</h2>
+    <p class="section-sub">Mockinator turns ad hoc mock chaos into a stable contract your whole team can build against from day one.</p>
+
+    <div class="before-after-grid">
+      <article class="state-card before">
+        <div class="state-badge">Before Mockinator</div>
+        <h3>Work waits on work.</h3>
+        <ul class="state-list">
+          <li><span class="list-mark">—</span><span>Frontend waits for backend</span></li>
+          <li><span class="list-mark">—</span><span>Inconsistent test data</span></li>
+          <li><span class="list-mark">—</span><span>Integration headaches</span></li>
+          <li><span class="list-mark">—</span><span>Delayed deployments</span></li>
+        </ul>
+      </article>
+      <article class="state-card after">
+        <div class="state-badge">After Mockinator</div>
+        <h3>Teams ship in parallel.</h3>
+        <ul class="state-list">
+          <li><span class="list-mark">✓</span><span>True parallel development</span></li>
+          <li><span class="list-mark">✓</span><span>Contract-based consistency</span></li>
+          <li><span class="list-mark">✓</span><span>Seamless integration</span></li>
+          <li><span class="list-mark">✓</span><span>Faster time to market</span></li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="section" id="how">
+  <div class="section-shell">
+    <span class="eyebrow">// How it works</span>
+    <h2 class="section-title">From idea to live endpoint<br />in four steps.</h2>
+    <p class="section-sub">No YAML. No local servers. No Faker.js syntax to memorize. Just describe what you need.</p>
+
+    <div class="steps">
+      <article class="step-card">
+        <div class="step-num">01</div>
+        <div class="step-icon">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#00D4FF" stroke-width="2" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Define Your API Contract</h3>
+        <p>Create contracts using our intuitive builder, upload your JSON Schema, or describe it in plain English with our AI.</p>
+      </article>
+      <article class="step-card">
+        <div class="step-num">02</div>
+        <div class="step-icon">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="#00D4FF" stroke-width="2" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>AI Generates Smart Mocks</h3>
+        <p>Our AI analyzes your contract and generates contextually coherent, realistic mock responses. Names match emails, dates make sense, relationships hold.</p>
+      </article>
+      <article class="step-card">
+        <div class="step-num">03</div>
+        <div class="step-icon">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" stroke="#00D4FF" stroke-width="2" stroke-linecap="round"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" stroke="#00D4FF" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Deploy Instantly</h3>
+        <p>Get a live, shareable HTTPS endpoint and the matching JSON Schema for backend validation — ready for your frontend, Postman, or CI pipeline immediately.</p>
+      </article>
+      <article class="step-card">
+        <div class="step-num">04</div>
+        <div class="step-icon">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M17 8l4 4-4 4M7 8l-4 4 4 4M14 4l-4 16" stroke="#00D4FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Collaborate &amp; Iterate</h3>
+        <p>Share with your team, gather feedback, and evolve your contracts as your API design matures. All changes sync across team members.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── SEE IT IN ACTION ── -->
+<section class="section">
+  <div class="section-shell">
+    <span class="eyebrow">// Demo</span>
+    <h2 class="section-title">From plain English to live endpoint in 30 seconds.</h2>
+    <p class="section-sub">Describe the shape once. Mockinator turns it into a live contract, realistic payload, and a URL your team can hit immediately.</p>
+
+    <div class="demo-grid">
+      <article class="demo-panel">
+        <div class="demo-panel-header">
+          <h3>Input</h3>
+          <span class="badge-method badge-get">Prompt</span>
+        </div>
+        <p class="demo-copy">Give Mockinator a natural language description instead of hand-writing fake JSON and local route logic.</p>
+        <div class="demo-terminal">
+          <div class="demo-terminal-label">Plain English Description</div>
+          <div class="demo-code">Create a payments API with an orders endpoint. When I POST a new order, return a 201 response with an orderId, customer object, purchased items, shippingAddress, estimatedDelivery, and total. Keep the data realistic and coherent.</div>
+        </div>
+      </article>
+
+      <article class="demo-panel highlight">
+        <div class="demo-panel-header">
+          <h3>Output</h3>
+          <span class="badge-method badge-post">Live endpoint</span>
+        </div>
+        <div class="demo-output-shell">
+          <div class="demo-request-line"><span class="code-label">POST</span> https://api.mockinator.io/payments-api/orders <span class="code-arrow">→ 201 Created</span></div>
+          <div class="demo-terminal-label">Response JSON</div>
+          <div class="demo-code">
+            <span class="t-punct">{</span><br />
+            &nbsp;&nbsp;<span class="t-key">"orderId"</span><span class="t-punct">:</span> <span class="t-str">"ord_9c1b8f20"</span><span class="t-punct">,</span><br />
+            &nbsp;&nbsp;<span class="t-key">"customer"</span><span class="t-punct">:</span> <span class="t-punct">{</span> <span class="t-key">"name"</span><span class="t-punct">:</span> <span class="t-str">"Maya Patel"</span> <span class="t-punct">},</span><br />
+            &nbsp;&nbsp;<span class="t-key">"items"</span><span class="t-punct">:</span> <span class="t-punct">[</span><span class="t-str">"Wireless Mouse"</span><span class="t-punct">,</span> <span class="t-str">"Laptop Stand"</span><span class="t-punct">],</span><br />
+            &nbsp;&nbsp;<span class="t-key">"shippingAddress"</span><span class="t-punct">:</span> <span class="t-punct">{</span> <span class="t-key">"city"</span><span class="t-punct">:</span> <span class="t-str">"Austin"</span> <span class="t-punct">},</span><br />
+            &nbsp;&nbsp;<span class="t-key">"estimatedDelivery"</span><span class="t-punct">:</span> <span class="t-str">"2026-04-06"</span><span class="t-punct">,</span><br />
+            &nbsp;&nbsp;<span class="t-key">"total"</span><span class="t-punct">:</span> <span class="t-num">148.5</span><br />
+            <span class="t-punct">}</span>
+          </div>
+          <div class="demo-note">Ready for frontend previews, QA flows, Postman collections, and CI checks.</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURES ── -->
+<section class="section" id="features">
+  <div class="section-shell">
+    <span class="eyebrow">// Features</span>
+    <h2 class="section-title">Everything your team<br />needs. Nothing you don't.</h2>
+
+    <div class="features-grid">
+      <div class="feat-card accent">
+        <div class="feat-icon green"><svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="#00FFB2" stroke-width="2" stroke-linejoin="round"/><path d="M2 17l10 5 10-5" stroke="#00FFB2" stroke-width="2"/><path d="M2 12l10 5 10-5" stroke="#00FFB2" stroke-width="2"/></svg></div>
+        <h3>LLM-Powered Mock Data</h3>
+        <p>Forget Faker.js templates. Our AI understands semantic context — it generates data that <em>makes sense together</em>, like a real database would produce.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon cyan"><svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4" stroke="#00D4FF" stroke-width="2" stroke-linecap="round"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" stroke="#00D4FF" stroke-width="2"/></svg></div>
+        <h3>JSON Schema Validation</h3>
+        <p>Every endpoint automatically ships with a battle-ready JSON Schema. Paste it into your backend validator in one click — no manual spec writing.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon amber"><svg width="22" height="22" fill="none" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1" stroke="#FFB800" stroke-width="2"/><rect x="14" y="3" width="7" height="7" rx="1" stroke="#FFB800" stroke-width="2"/><rect x="3" y="14" width="7" height="7" rx="1" stroke="#FFB800" stroke-width="2"/><path d="M17.5 14v7M14 17.5h7" stroke="#FFB800" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Visual Schema Builder</h3>
+        <p>Not a LLM fan? Use the drag-and-drop field editor to define types, constraints, and enums. Perfect for teams who prefer explicit control.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon cyan"><svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" stroke="#00D4FF" stroke-width="2" stroke-linecap="round"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" stroke="#00D4FF" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Shareable HTTPS Endpoints</h3>
+        <p>Every mock lives at a stable <code class="inline-cyan">api.mockinator.io</code> URL. Share with teammates, QA, or external contractors without running anything locally.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon green"><svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="#00FFB2" stroke-width="2" stroke-linejoin="round"/></svg></div>
+        <h3>Instant, Zero Setup</h3>
+        <p>No CLI. No Docker. No local port conflicts. Mockinator runs entirely in the browser — create your first mock in under 30 seconds.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon amber"><svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M2 20h.01M7 20v-4" stroke="#FFB800" stroke-width="2" stroke-linecap="round"/><path d="M12 20V10" stroke="#FFB800" stroke-width="2" stroke-linecap="round"/><path d="M17 20V4" stroke="#FFB800" stroke-width="2" stroke-linecap="round"/><path d="M22 20v-8" stroke="#FFB800" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Request Inspector</h3>
+        <p>Live request logs with headers, query params, and body — so you can debug exactly how your frontend is talking to the mock, in real time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── COMPARISON ── -->
+<div class="compare-section" id="compare">
+  <div class="compare-wrap">
+    <span class="eyebrow">// Compare</span>
+    <h2 class="section-title">How Mockinator stacks up.</h2>
+    <p class="section-sub">The tools engineers actually use, honestly compared on the things that matter for daily development work.</p>
+
+    <div class="compare-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Capability</th>
+            <th class="th-mockinator">★ Mockinator</th>
+            <th>Beeceptor</th>
+            <th>Mockoon</th>
+            <th>Postman</th>
+            <th>WireMock</th>
+            <th>Prism/Stoplight</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight-row">
+            <td>LLM-generated coherent data</td>
+            <td class="td-mockinator"><span class="check">✓</span> Native</td>
+            <td><span class="partial">partial</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td>JSON Schema validation (built-in)</td>
+            <td class="td-mockinator"><span class="check">✓</span> 1-click</td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="partial">partial</span></td>
+            <td><span class="partial">partial</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="check">✓</span> OpenAPI only</td>
+          </tr>
+          <tr>
+            <td>No local install required</td>
+            <td class="td-mockinator"><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="cross">✗</span> Desktop app</td>
+            <td><span class="check">✓</span></td>
+            <td><span class="cross">✗</span> Java / Docker</td>
+            <td><span class="partial">CLI</span></td>
+          </tr>
+          <tr>
+            <td>Natural language → endpoint</td>
+            <td class="td-mockinator"><span class="check">✓</span></td>
+            <td><span class="partial">partial</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td>Visual schema builder</td>
+            <td class="td-mockinator"><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="partial">partial</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Shareable cloud endpoints</td>
+            <td class="td-mockinator"><span class="check">✓</span> Free tier</td>
+            <td><span class="check">✓</span></td>
+            <td><span class="partial">Paid only</span></td>
+            <td><span class="partial">Limited</span></td>
+            <td><span class="partial">Paid Cloud</span></td>
+            <td><span class="partial">Paid only</span></td>
+          </tr>
+          <tr>
+            <td>Transparent pricing</td>
+            <td class="td-mockinator"><span class="check">✓</span></td>
+            <td><span class="partial">per endpoint</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="cross">✗</span> Enterprise</td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Setup time to first mock</td>
+            <td class="td-mockinator compare-timing">&lt; 30 seconds</td>
+            <td class="compare-time">~2 min</td>
+            <td class="compare-time">~5 min</td>
+            <td class="compare-time">~5 min</td>
+            <td class="compare-time">~30 min</td>
+            <td class="compare-time">~10 min</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ── SECURITY & COMPLIANCE ── -->
+<section class="section">
+  <div class="section-shell">
+    <div class="security-header">
+      <div>
+        <span class="eyebrow">// Security</span>
+        <h2 class="section-title">Enterprise-grade security.</h2>
+        <p class="section-sub">Security posture matters even for mock infrastructure. Mockinator is designed for teams that care about privacy, uptime, and compliance from the start.</p>
+      </div>
+      <div class="security-badges">
+        <span class="security-badge cyan">SOC 2 Compliant</span>
+        <span class="security-badge green">GDPR Ready</span>
+      </div>
+    </div>
+
+    <div class="security-grid">
+      <article class="security-card">
+        <div class="security-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V7l7-4z" stroke="#00D4FF" stroke-width="2" stroke-linejoin="round"/></svg></div>
+        <h3>Reliable infrastructure</h3>
+        <p>SOC 2 Type II compliant infrastructure with 99.9% uptime guarantee, so your team can depend on shared mocks during active delivery work.</p>
+      </article>
+      <article class="security-card">
+        <div class="security-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2" stroke="#00D4FF" stroke-width="2"/><path d="M8 11V8a4 4 0 1 1 8 0v3" stroke="#00D4FF" stroke-width="2"/></svg></div>
+        <h3>Encrypted by default</h3>
+        <p>End-to-end encryption (AES-256) for all data in transit and at rest, covering contracts, generated payloads, and collaborative workspace traffic.</p>
+      </article>
+      <article class="security-card">
+        <div class="security-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9z" stroke="#00D4FF" stroke-width="2"/><path d="M8 12h8M12 8v8" stroke="#00D4FF" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Privacy-first handling</h3>
+        <p>GDPR compliant — your API contracts and mock data remain private, giving teams confidence when prototyping customer-facing flows.</p>
+      </article>
+      <article class="security-card">
+        <div class="security-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M4 20h16M6 17V7m4 10V4m4 13v-7m4 7V9" stroke="#00D4FF" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Built for regulated teams</h3>
+        <p>Built to meet HIPAA, PCI DSS, and other compliance requirements as teams move from prototype workflows into more formal delivery and audit needs.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRICING ── -->
+<section class="section" id="pricing">
+  <div class="section-shell">
+    <span class="eyebrow">// Pricing</span>
+    <h2 class="section-title">Simple, honest pricing.</h2>
+    <p class="section-sub">Start free. Scale when you need to. No per-endpoint gotchas, no surprise overage bills.</p>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-plan">Starter</div>
+        <div class="price-amount">$0<span>/mo</span></div>
+        <p class="price-desc">For solo engineers and side projects.</p>
+        <hr class="price-divider" />
+        <div class="price-feat"><span class="pf-check">✓</span><span><strong>5 mock endpoints</strong></span></div>
+        <div class="price-feat"><span class="pf-check">✓</span><span><strong>10,000</strong> requests / month</span></div>
+        <div class="price-feat"><span class="pf-check">✓</span><span>LLM data generation</span></div>
+        <div class="price-feat"><span class="pf-check">✓</span><span>JSON Schema export</span></div>
+        <div class="price-feat"><span class="pf-check">✓</span><span>Request inspector</span></div>
+        <a href="#" class="btn-plan btn-plan-outline js-open-subscribe-modal">Get started free</a>
+      </div>
+
+      <div class="price-card featured">
+        <div class="price-plan pro">Pro</div>
+        <div class="price-amount">$19<span>/mo</span></div>
+        <p class="price-desc">For teams shipping fast, every sprint.</p>
+        <hr class="price-divider featured" />
+        <div class="price-feat"><span class="pf-check">✓</span><span><strong>Unlimited</strong> endpoints</span></div>
+        <div class="price-feat"><span class="pf-check">✓</span><span><strong>500,000</strong> requests / month</span></div>
+        <div class="price-feat"><span class="pf-check">✓</span><span>Everything in Starter</span></div>
+        <div class="price-feat"><span class="pf-check">✓</span><span>Team workspace (up to 10)</span></div>
+        <div class="price-feat"><span class="pf-check">✓</span><span>Custom response headers &amp; latency</span></div>
+        <div class="price-feat"><span class="pf-check">✓</span><span>Priority support</span></div>
+        <a href="#" class="btn-plan btn-plan-fill js-open-subscribe-modal">Start 14-day trial</a>
+      </div>
+
+      <div class="price-card">
+        <div class="price-plan">Enterprise</div>
+        <div class="price-amount custom">Custom</div>
+        <p class="price-desc">For orgs with security, scale, and SLA needs.</p>
+        <hr class="price-divider" />
+        <div class="price-feat"><span class="pf-check">✓</span><span>Unlimited everything</span></div>
+        <div class="price-feat"><span class="pf-check">✓</span><span>SSO &amp; SAML</span></div>
+        <div class="price-feat"><span class="pf-check">✓</span><span>Private cloud deployment</span></div>
+        <div class="price-feat"><span class="pf-check">✓</span><span>Audit logs &amp; access controls</span></div>
+        <div class="price-feat"><span class="pf-check">✓</span><span>SLA + dedicated support</span></div>
+        <a href="#" class="btn-plan btn-plan-outline js-open-subscribe-modal">Talk to us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="section">
+  <div class="section-shell">
+    <span class="eyebrow">// FAQ</span>
+    <h2 class="section-title">Questions teams ask before they stop wiring mocks by hand.</h2>
+    <p class="section-sub">Everything you need to know about Mockinator and how it works.</p>
+
+    <div class="faq-list">
+      <article class="faq-item is-open">
+        <button class="faq-question" aria-expanded="true"><span>How does Mockinator differ from other API mocking tools?</span><span>+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Most mocking tools help you stand up a fake endpoint. Mockinator goes further by generating live endpoints from plain English, producing LLM-coherent response data, and validating everything against a JSON Schema. That means less setup, more realistic payloads, and a mock contract your whole team can actually share.</p></div></div>
+      </article>
+      <article class="faq-item">
+        <button class="faq-question" aria-expanded="false"><span>What are custom mocked reusable objects?</span><span>+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Reusable objects let you define common response shapes once and use them across endpoints. Think customer profiles, addresses, subscriptions, or payment records. Instead of recreating the same mock fragments over and over, your team can keep data structures consistent across flows and update them from one source of truth.</p></div></div>
+      </article>
+      <article class="faq-item">
+        <button class="faq-question" aria-expanded="false"><span>How quickly can I deploy a mock server?</span><span>+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>In most cases, you can go from description to live endpoint in under 30 seconds. Describe the API shape, review the generated response and schema, and Mockinator gives you a shareable HTTPS endpoint immediately — no local runtime, Docker setup, or manual route wiring required.</p></div></div>
+      </article>
+      <article class="faq-item">
+        <button class="faq-question" aria-expanded="false"><span>Is there a limit on API requests for the free plan?</span><span>+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Yes. The Starter plan includes 10,000 requests per month across up to 5 mock endpoints. That is usually enough for prototyping, side projects, and early team validation. When you need more volume, collaboration capacity, or unlimited endpoints, the Pro plan removes those early limits.</p></div></div>
+      </article>
+      <article class="faq-item">
+        <button class="faq-question" aria-expanded="false"><span>Can I customize the mock data generation?</span><span>+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Yes. You can shape responses using plain English instructions, schema constraints, enums, field types, and reusable objects. That gives you control over the structure while still benefiting from Mockinator's ability to generate data that stays realistic, internally consistent, and useful for frontend and QA workflows.</p></div></div>
+      </article>
+      <article class="faq-item">
+        <button class="faq-question" aria-expanded="false"><span>How does team collaboration work?</span><span>+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Mocks live at stable shareable URLs, so product, design, frontend, QA, and backend can all work against the same contract. Instead of every person maintaining a slightly different local mock, Mockinator keeps the team aligned around one endpoint and one schema as the API evolves.</p></div></div>
+      </article>
+      <article class="faq-item">
+        <button class="faq-question" aria-expanded="false"><span>What about data privacy and security?</span><span>+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Mockinator is built with privacy and compliance in mind. Data is encrypted in transit and at rest, infrastructure is designed around enterprise-grade controls, and contracts stay private to your workspace. For teams with stricter requirements, the roadmap includes deployment and compliance options that fit regulated environments.</p></div></div>
+      </article>
+      <article class="faq-item">
+        <button class="faq-question" aria-expanded="false"><span>Can I use Mockinator with my current IDE?</span><span>+</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Yes. Mockinator is designed to fit into the tools you already use. Because every mock is exposed as a standard HTTPS endpoint with a matching schema, you can call it from your IDE, local app, test suite, Postman collection, CI pipeline, or any client that speaks HTTP.</p></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA STRIP ── -->
+<section class="cta-strip">
+  <div class="grid-bg"></div>
+  <h2>Start mocking in <em class="inline-cyan">30 seconds.</em></h2>
+  <p>Join thousands of engineers who've stopped wasting time on config files.</p>
+  <div class="cta-email">
+    <a href="#" class="btn-hero js-open-subscribe-modal">Request early access →</a>
+  </div>
+  <p class="cta-meta">No credit card. No install. Cancel whenever.</p>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-left">
+    <a class="nav-logo" href="#">
+      <svg width="28" height="28" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="36" height="36" rx="9" fill="#0C1220"/>
+        <circle cx="18" cy="10" r="2.5" fill="#00D4FF"/>
+        <circle cx="10" cy="22" r="2.5" fill="#00FFB2"/>
+        <circle cx="26" cy="22" r="2.5" fill="#00D4FF"/>
+        <circle cx="18" cy="18" r="3" fill="#00FFB2"/>
+        <line x1="18" y1="12.5" x2="18" y2="15" stroke="#00D4FF" stroke-width="1.5" stroke-opacity=".7"/>
+        <line x1="12" y1="21" x2="15.1" y2="19.1" stroke="#00FFB2" stroke-width="1.5" stroke-opacity=".7"/>
+        <line x1="24" y1="21" x2="20.9" y2="19.1" stroke="#00D4FF" stroke-width="1.5" stroke-opacity=".7"/>
+        <circle cx="18" cy="18" r="15" stroke="#00D4FF" stroke-width="1" stroke-dasharray="3 3" stroke-opacity=".25"/>
+      </svg>
+      <span>Mockinator</span>
+    </a>
+    <span class="footer-copy">© 2026 Mockinator. Built for engineers who ship.</span>
+  </div>
+  <div class="footer-links">
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+</footer>
+
+<!-- ── WAITLIST MODAL ── -->
+<div class="subscribe-modal-overlay" id="subscribe-modal-overlay" hidden>
+  <div class="subscribe-modal" role="dialog" aria-modal="true" aria-labelledby="subscribe-modal-title">
+    <button type="button" class="subscribe-modal-close" id="subscribe-modal-close" aria-label="Close dialog">&times;</button>
+    <h3 class="subscribe-modal-title" id="subscribe-modal-title">Join our waitlist</h3>
+    <div class="subscribe-modal-copy" id="subscribe-modal-copy"></div>
+
+    <form id="subscribe-modal-form" class="subscribe-modal-form">
+      <label for="subscribe-full-name">Full Name</label>
+      <input id="subscribe-full-name" type="text" placeholder="Enter your full name" required />
+
+      <label for="subscribe-email">Email Address</label>
+      <input id="subscribe-email" type="email" placeholder="Enter your email address" required />
+
+      <button type="submit" class="subscribe-submit-btn">Join now</button>
+    </form>
+
+    <div class="subscribe-modal-actions" id="subscribe-modal-actions" hidden>
+      <button type="button" class="subscribe-secondary-btn" id="subscribe-modal-done">Close</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/animations.js"></script>
+<script src="js/slug-cycler.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/faq.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+/* ── RESPONSIVE QUERIES ────────────────────────────── */
+@media (max-width: 1200px) {
+  .steps { grid-template-columns: repeat(2, 1fr); }
+  .security-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 1024px) {
+  nav { padding: 0 var(--space-6); }
+  .section, .section-full, .compare-wrap { padding-left: var(--space-6); padding-right: var(--space-6); }
+  .features-grid, .pricing-grid, .problem-grid, .demo-grid, .before-after-grid { grid-template-columns: 1fr; }
+  .hero-terminal .terminal-body { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-cta .btn-ghost { display: none; }
+  .section, .section-full, .compare-wrap, .legal-page { padding: var(--space-12) var(--space-6); }
+  .hero h1 { letter-spacing: -2px; }
+  .hero-sub { font-size: 17px; }
+  .steps, .features-grid, .pricing-grid, .problem-grid, .security-grid, .demo-grid, .before-after-grid { grid-template-columns: 1fr; }
+  .problem-stat, .security-header, footer { flex-direction: column; align-items: flex-start; }
+  .subscribe-modal { padding: 22px 18px 18px; }
+  .subscribe-modal-title { font-size: 30px; }
+  .subscribe-modal-copy p { font-size: 15px; }
+}
+
+@media (max-width: 375px) {
+  nav { height: auto; padding-top: var(--space-4); padding-bottom: var(--space-4); }
+  .nav-logo span { font-size: 18px; }
+  .btn-primary, .btn-hero, .btn-hero-ghost { width: 100%; justify-content: center; }
+  .hero { padding-left: 16px; padding-right: 16px; }
+  .hero-terminal { margin-top: var(--space-10); }
+  .terminal-bar { flex-wrap: wrap; }
+  .url-bar { min-width: 100%; margin-left: 0; }
+  .terminal-bar-actions { width: 100%; justify-content: flex-end; }
+  .section, .section-full, .compare-wrap, .legal-page, footer { padding-left: var(--space-4); padding-right: var(--space-4); }
+  .faq-question { font-size: 17px; padding: 18px 18px; }
+  .faq-answer p { padding-left: 18px; padding-right: 18px; }
+}

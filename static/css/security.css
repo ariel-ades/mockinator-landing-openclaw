@@ -1,0 +1,43 @@
+/* ── SECURITY SECTION ──────────────────────────────── */
+.security-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+}
+.security-badges { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.security-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+.security-badge.cyan { border: 1px solid rgba(0, 212, 255, 0.25); background: var(--cyan-dim); color: var(--cyan); }
+.security-badge.green { border: 1px solid rgba(0, 255, 178, 0.25); background: var(--green-dim); color: var(--green); }
+.security-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+  margin-top: var(--space-11);
+}
+.security-card { padding: 28px 24px; border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); }
+.security-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+  border: 1px solid rgba(0, 212, 255, 0.24);
+  border-radius: 10px;
+  background: var(--cyan-dim);
+}
+.security-card h3 { margin-bottom: var(--space-3); font-family: var(--font-heading); font-size: 18px; font-weight: 700; }
+.security-card p { color: var(--txt-2); font-size: 14px; line-height: 1.7; }

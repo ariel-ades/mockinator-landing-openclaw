@@ -1,0 +1,39 @@
+/* ── BEFORE / AFTER SECTION ────────────────────────── */
+.before-after-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  margin-top: var(--space-11);
+}
+.state-card {
+  padding: 32px 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+.state-card.before { border-color: rgba(255, 184, 0, 0.24); }
+.state-card.after {
+  border-color: rgba(0, 255, 178, 0.25);
+  background: linear-gradient(160deg, rgba(0, 255, 178, 0.05), var(--surface) 60%);
+}
+.state-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+.state-card.before .state-badge { color: var(--amber); border: 1px solid rgba(255, 184, 0, 0.25); background: var(--amber-dim); }
+.state-card.after .state-badge { color: var(--green); border: 1px solid rgba(0, 255, 178, 0.25); background: var(--green-dim); }
+.state-card h3 { margin-bottom: var(--space-5); font-family: var(--font-heading); font-size: 24px; font-weight: 700; }
+.state-list { list-style: none; display: grid; gap: var(--space-4); }
+.state-list li { display: flex; align-items: flex-start; gap: var(--space-3); color: var(--txt-2); font-size: 15px; }
+.list-mark { flex-shrink: 0; font-family: var(--font-mono); font-size: 15px; font-weight: 700; }
+.state-card.before .list-mark { color: var(--amber); }
+.state-card.after .list-mark { color: var(--green); }

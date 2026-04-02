@@ -1,0 +1,52 @@
+/* ── HOW IT WORKS SECTION ──────────────────────────── */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-7);
+  margin-top: var(--space-11);
+}
+.step-card {
+  position: relative;
+  overflow: hidden;
+  padding: 36px 32px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  transition: border-color var(--duration-base), box-shadow var(--duration-base);
+}
+.step-card:hover { border-color: var(--border-hi); box-shadow: 0 0 30px var(--cyan-dim); }
+.step-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--cyan-dim), transparent 60%);
+  opacity: 0;
+  transition: opacity var(--duration-base);
+}
+.step-card:hover::before { opacity: 1; }
+.step-num {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  color: rgba(0, 212, 255, 0.25);
+  font-family: var(--font-heading);
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1;
+}
+.step-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-5);
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  border-radius: 12px;
+  background: var(--cyan-dim);
+}
+.step-card h3 { margin-bottom: var(--space-3); font-family: var(--font-heading); font-size: 20px; font-weight: 700; }
+.step-card p { color: var(--txt-2); font-size: 15px; line-height: 1.65; }
+.inline-cyan { color: var(--cyan); font-style: normal; }
+.inline-green { color: var(--green); font-style: normal; }
+.inline-amber { color: var(--amber); }
