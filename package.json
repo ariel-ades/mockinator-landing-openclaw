@@ -1,0 +1,10 @@
+{
+  "name": "mockinator-landing-openclaw",
+  "private": true,
+  "scripts": {
+    "deploy:local": "bash scripts/deploy.sh local",
+    "deploy:dev": "bash scripts/deploy.sh dev",
+    "deploy:stg": "bash scripts/deploy.sh stg",
+    "deploy:prd": "bash scripts/deploy.sh prd"
+  }
+}
