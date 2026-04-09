@@ -11,58 +11,70 @@
   padding: 32px 28px;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent), var(--surface);
+  background: var(--surface);
   transition: border-color var(--duration-base), transform var(--duration-base), box-shadow var(--duration-base);
 }
 .problem-card:hover {
   transform: translateY(-3px);
-  border-color: var(--border-hi);
+  border-color: rgba(255, 200, 87, 0.4);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 .problem-card::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, var(--cyan-dim), transparent 60%);
+  background: linear-gradient(135deg, var(--amber-dim), transparent 60%);
   opacity: 0;
   transition: opacity var(--duration-base);
 }
 .problem-card:hover::before { opacity: 1; }
 .problem-icon {
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: var(--space-5);
-  border: 1px solid rgba(255, 184, 0, 0.25);
-  border-radius: 10px;
+  border: 1px solid rgba(255, 200, 87, 0.25);
+  border-radius: 12px;
   background: var(--amber-dim);
+  position: relative;
+  z-index: 1;
 }
 .problem-card h3 {
+  position: relative;
+  z-index: 1;
   margin-bottom: var(--space-3);
   color: var(--txt-1);
   font-family: var(--font-heading);
-  font-size: 22px;
+  font-size: var(--text-lg);
   font-weight: 700;
+  letter-spacing: -0.5px;
 }
-.problem-card p { color: var(--txt-2); font-size: 15px; line-height: 1.7; }
+.problem-card p {
+  position: relative;
+  z-index: 1;
+  color: var(--txt-2);
+  font-size: var(--text-sm);
+  line-height: 1.7;
+}
 .problem-stat {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: var(--space-8);
   margin-top: var(--space-8);
-  padding: 24px 28px;
-  border: 1px solid rgba(255, 184, 0, 0.25);
+  padding: 28px 32px;
+  border: 1px solid rgba(255, 200, 87, 0.2);
   border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, rgba(255, 184, 0, 0.08), rgba(0, 212, 255, 0.06));
+  background: linear-gradient(135deg, rgba(255, 200, 87, 0.06), rgba(0, 212, 255, 0.04));
 }
 .problem-stat strong {
   color: var(--txt-1);
   font-family: var(--font-heading);
-  font-size: clamp(24px, 4vw, 40px);
+  font-size: clamp(22px, 3vw, 36px);
   font-weight: 800;
   letter-spacing: -1.5px;
+  flex-shrink: 0;
 }
-.problem-stat p { max-width: 560px; color: var(--txt-2); font-size: 15px; }
+.problem-stat p { max-width: 560px; color: var(--txt-2); font-size: var(--text-sm); line-height: 1.65; }

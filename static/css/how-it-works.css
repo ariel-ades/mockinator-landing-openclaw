@@ -2,19 +2,19 @@
 .steps {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-7);
+  gap: var(--space-6);
   margin-top: var(--space-11);
 }
 .step-card {
   position: relative;
   overflow: hidden;
-  padding: 36px 32px;
+  padding: 36px 28px;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background: var(--surface);
-  transition: border-color var(--duration-base), box-shadow var(--duration-base);
+  transition: border-color var(--duration-base), box-shadow var(--duration-base), transform var(--duration-base);
 }
-.step-card:hover { border-color: var(--border-hi); box-shadow: 0 0 30px var(--cyan-dim); }
+.step-card:hover { border-color: var(--border-hi); box-shadow: 0 0 36px var(--cyan-glow); transform: translateY(-3px); }
 .step-card::before {
   content: '';
   position: absolute;
@@ -26,13 +26,14 @@
 .step-card:hover::before { opacity: 1; }
 .step-num {
   position: absolute;
-  top: 24px;
-  right: 24px;
-  color: rgba(0, 212, 255, 0.25);
+  top: 20px;
+  right: 20px;
+  color: rgba(0, 212, 255, 0.18);
   font-family: var(--font-heading);
-  font-size: 64px;
+  font-size: 56px;
   font-weight: 800;
   line-height: 1;
+  user-select: none;
 }
 .step-icon {
   width: 48px;
@@ -44,9 +45,25 @@
   border: 1px solid rgba(0, 212, 255, 0.25);
   border-radius: 12px;
   background: var(--cyan-dim);
+  position: relative;
+  z-index: 1;
 }
-.step-card h3 { margin-bottom: var(--space-3); font-family: var(--font-heading); font-size: 20px; font-weight: 700; }
-.step-card p { color: var(--txt-2); font-size: 15px; line-height: 1.65; }
+.step-card h3 {
+  position: relative;
+  z-index: 1;
+  margin-bottom: var(--space-3);
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+.step-card p {
+  position: relative;
+  z-index: 1;
+  color: var(--txt-2);
+  font-size: var(--text-sm);
+  line-height: 1.65;
+}
 .inline-cyan { color: var(--cyan); font-style: normal; }
 .inline-green { color: var(--green); font-style: normal; }
 .inline-amber { color: var(--amber); }

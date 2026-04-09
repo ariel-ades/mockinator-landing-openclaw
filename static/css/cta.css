@@ -4,36 +4,77 @@
   overflow: hidden;
   padding: var(--space-16) var(--space-10);
   text-align: center;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 .cta-strip::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, rgba(0, 212, 255, 0.12), transparent 65%);
+  background:
+    radial-gradient(ellipse 70% 100% at 50% 0%, rgba(0, 212, 255, 0.1), transparent 65%),
+    radial-gradient(ellipse 50% 60% at 50% 100%, rgba(53, 214, 160, 0.06), transparent 60%);
 }
-.cta-strip h2 {
+/* Dot grid inside CTA */
+.cta-strip::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(0, 188, 212, 0.12) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 60% 80% at 50% 50%, black 0%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 80% at 50% 50%, black 0%, transparent 100%);
+}
+.cta-inner {
   position: relative;
   z-index: 1;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.cta-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: var(--space-6);
+  padding: 5px 14px;
+  border: 1px solid rgba(53, 214, 160, 0.25);
+  border-radius: 999px;
+  background: rgba(53, 214, 160, 0.06);
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.cta-strip h2 {
   font-family: var(--font-heading);
   font-size: clamp(32px, 5vw, 60px);
   font-weight: 800;
-  letter-spacing: -2px;
+  letter-spacing: -2.5px;
+  line-height: 1.05;
+  color: var(--txt-1);
+}
+.cta-strip h2 em {
+  font-style: normal;
+  background: linear-gradient(135deg, var(--cyan-strong), var(--green));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .cta-strip p {
-  position: relative;
-  z-index: 1;
   max-width: 480px;
-  margin: 16px auto 40px;
+  margin: 20px auto 0;
   color: var(--txt-2);
-  font-size: 18px;
+  font-size: var(--text-base);
+  line-height: 1.6;
 }
 .cta-email {
-  position: relative;
-  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: var(--space-3);
   flex-wrap: wrap;
+  margin-top: var(--space-9);
 }
-.cta-meta { margin-top: 16px; color: var(--txt-3); font-size: 13px; }
+.cta-meta { margin-top: 16px; color: var(--txt-3); font-size: var(--text-sm); }
+.cta-meta span { color: var(--green); }

@@ -5,7 +5,7 @@ body {
   background: var(--bg);
   color: var(--txt-1);
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: var(--text-base);
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -26,22 +26,31 @@ section, nav, footer, main { position: relative; z-index: 1; }
 .section { padding: var(--space-16) var(--space-10); }
 .section-shell { max-width: var(--container); margin: 0 auto; }
 .section-full { padding: var(--space-16) var(--space-10); }
+
+/* Dot-grid background — Stitch MCP aesthetic */
 .grid-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-image:
-    linear-gradient(var(--cyan-dim) 1px, transparent 1px),
-    linear-gradient(90deg, var(--cyan-dim) 1px, transparent 1px);
-  background-size: 60px 60px;
+  background-image: radial-gradient(circle, rgba(0, 188, 212, 0.18) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 100%);
 }
+
 .eyebrow {
-  display: block;
-  margin-bottom: var(--space-4);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: var(--space-5);
+  padding: 4px 12px;
+  border: 1px solid rgba(0, 188, 212, 0.2);
+  border-radius: 999px;
+  background: rgba(0, 188, 212, 0.06);
   color: var(--cyan);
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: var(--text-xs);
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -57,7 +66,7 @@ section, nav, footer, main { position: relative; z-index: 1; }
   max-width: 620px;
   margin-top: var(--space-4);
   color: var(--txt-2);
-  font-size: 17px;
+  font-size: var(--text-base);
   line-height: 1.7;
 }
 .fade-up { animation: fadeUp var(--duration-slow) var(--ease-out) both; }
@@ -72,3 +81,4 @@ section, nav, footer, main { position: relative; z-index: 1; }
 @keyframes blink { 50% { opacity: 0; } }
 @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 @keyframes spin { to { transform: rotate(360deg); } }
+@keyframes shimmer { from { background-position: -200% center; } to { background-position: 200% center; } }
