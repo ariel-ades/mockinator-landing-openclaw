@@ -8,8 +8,9 @@ nav {
   justify-content: space-between;
   height: 64px;
   padding: 0 var(--space-10);
-  background: rgba(10, 15, 28, 0.85);
-  backdrop-filter: blur(16px);
+  background: rgba(6, 14, 26, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
 }
 .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
@@ -18,17 +19,18 @@ nav {
   font-family: var(--font-heading);
   font-size: 20px;
   font-weight: 700;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.5px;
 }
 .nav-links { display: flex; gap: 32px; }
 .nav-links a {
   color: var(--txt-2);
   text-decoration: none;
-  font-size: 14px;
+  font-size: var(--text-sm);
   font-weight: 500;
+  letter-spacing: 0.1px;
   transition: color var(--duration-fast);
 }
-.nav-links a:hover { color: var(--cyan); }
+.nav-links a:hover { color: var(--txt-1); }
 .nav-cta { display: flex; align-items: center; gap: 12px; }
 .btn-ghost,
 .btn-primary,
@@ -39,34 +41,36 @@ nav {
 .subscribe-secondary-btn { transition: all var(--duration-fast); }
 .btn-ghost {
   padding: 8px 18px;
-  border: 1px solid var(--border-hi);
+  border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   background: transparent;
-  color: var(--txt-2);
+  color: var(--txt-3);
   cursor: pointer;
-  font-size: 14px;
+  font-size: var(--text-sm);
   font-weight: 500;
   text-decoration: none;
 }
-.btn-ghost:hover { background: var(--cyan-dim); color: var(--txt-1); }
+.btn-ghost:hover { background: rgba(255,255,255,0.04); color: var(--txt-2); border-color: var(--b2); }
 .btn-ghost.is-disabled,
 .btn-ghost[aria-disabled='true'] {
-  opacity: 0.45;
+  opacity: 0.4;
   pointer-events: none;
   cursor: not-allowed;
-  border-color: var(--border);
 }
 .btn-primary {
-  padding: 8px 20px;
+  padding: 9px 20px;
   border: 0;
   border-radius: var(--radius-sm);
   background: linear-gradient(135deg, var(--cyan), #00A3C8);
-  box-shadow: 0 0 18px rgba(0, 212, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.28);
   color: var(--black);
   cursor: pointer;
-  font-size: 14px;
+  font-size: var(--text-sm);
   font-weight: 700;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
   text-decoration: none;
 }
-.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 0 28px rgba(0, 212, 255, 0.5); }
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 32px rgba(0, 212, 255, 0.48);
+}

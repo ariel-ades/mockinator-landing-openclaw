@@ -1,39 +1,67 @@
 /* ── CSS VARIABLES ─────────────────────────────────── */
+/* Design tokens synced with mockinator-web-openclaw   */
 :root {
-  --bg: #0A0F1C;
-  --surface: #0C1220;
-  --surface-2: #111827;
-  --surface-3: #0E1728;
-  --surface-4: rgba(255, 255, 255, 0.03);
-  --border: rgba(0, 212, 255, 0.12);
-  --border-hi: rgba(0, 212, 255, 0.35);
-  --cyan: #00D4FF;
-  --cyan-dim: rgba(0, 212, 255, 0.08);
-  --cyan-glow: rgba(0, 212, 255, 0.22);
-  --green: #00FFB2;
-  --green-dim: rgba(0, 255, 178, 0.08);
-  --amber: #FFB800;
-  --amber-dim: rgba(255, 184, 0, 0.08);
-  --red-soft: #FF5C7A;
-  --txt-1: #EDF2FF;
-  --txt-2: #7B93B8;
-  --txt-3: #3D556E;
-  --txt-4: #D0DEFA;
+  /* ── Backgrounds ── */
+  --bg: #060e1a;
+  --bg-elevated: #081425;
+  --surface: #0c1828;
+  --surface-2: #102033;
+  --surface-3: #15283d;
+  --surface-4: #1b3148;
+
+  /* ── Borders ── */
+  --b1: #20374d;
+  --b2: #31516c;
+  --border: rgba(32, 55, 77, 0.92);
+  --border-hi: rgba(66, 223, 242, 0.35);
+  --border-subtle: rgba(32, 55, 77, 0.5);
+
+  /* ── Brand colours ── */
+  --cyan: #00bcd4;
+  --cyan-strong: #42dff2;
+  --cyan-dim: rgba(0, 188, 212, 0.08);
+  --cyan-glow: rgba(0, 188, 212, 0.22);
+  --green: #35d6a0;
+  --green-dim: rgba(53, 214, 160, 0.08);
+  --amber: #ffc857;
+  --amber-dim: rgba(255, 200, 87, 0.08);
+  --red-soft: #ff6f8f;
+  --purple: #a78bfa;
+
+  /* ── Text ── */
+  --txt-1: #f4f8fb;
+  --txt-2: #b4c2d7;
+  --txt-3: #7f93ac;
+  --txt-4: #d0defa;
   --white: #FFFFFF;
   --black: #000000;
-  --success: #27C93F;
-  --warning: #FFBD2E;
-  --danger: #FF5C5C;
+
+  /* ── Status ── */
+  --success: #35d6a0;
+  --warning: #ffc857;
+  --danger: #ff6f8f;
+
+  /* ── Radii ── */
   --radius-sm: 8px;
   --radius: 12px;
   --radius-md: 14px;
   --radius-lg: 20px;
-  --shadow-cyan: 0 0 28px rgba(0, 212, 255, 0.35);
-  --shadow-cyan-strong: 0 0 40px rgba(0, 212, 255, 0.55);
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+
+  /* ── Shadows ── */
+  --shadow-cyan: 0 0 28px rgba(0, 188, 212, 0.35);
+  --shadow-cyan-strong: 0 0 40px rgba(0, 188, 212, 0.55);
   --shadow-panel: 0 24px 80px rgba(0, 0, 0, 0.6);
   --shadow-card: 0 16px 48px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 18px 42px rgba(0, 0, 0, 0.22);
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.32);
+
+  /* ── Layout ── */
   --container: 1200px;
   --container-wide: 1280px;
+
+  /* ── Spacing (4-based scale) ── */
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -50,13 +78,28 @@
   --space-14: 80px;
   --space-15: 96px;
   --space-16: 100px;
+
+  /* ── Typography scale ── */
   --font-heading: 'Hanken Grotesk', sans-serif;
   --font-body: 'Instrument Sans', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
+
+  --text-xs:   12px;
+  --text-sm:   14px;
+  --text-base: 18px;
+  --text-md:   20px;
+  --text-lg:   24px;   /* card headers */
+  --text-xl:   32px;
+  --text-2xl:  48px;
+  --text-3xl:  64px;
+
+  /* ── Breakpoints ── */
   --bp-sm: 375px;
   --bp-md: 768px;
   --bp-lg: 1024px;
   --bp-xl: 1440px;
+
+  /* ── Motion ── */
   --duration-fast: 0.2s;
   --duration-base: 0.3s;
   --duration-slow: 0.8s;

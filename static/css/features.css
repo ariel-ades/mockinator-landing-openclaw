@@ -6,26 +6,53 @@
   margin-top: var(--space-11);
 }
 .feat-card {
+  position: relative;
+  overflow: hidden;
   padding: 32px 28px;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background: var(--surface);
   transition: transform var(--duration-base), border-color var(--duration-base), box-shadow var(--duration-base);
 }
-.feat-card:hover { transform: translateY(-3px); border-color: var(--border-hi); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4); }
-.feat-card.accent { border-color: rgba(0, 255, 178, 0.25); background: linear-gradient(135deg, rgba(0, 255, 178, 0.05), var(--surface)); }
-.feat-card.accent:hover { border-color: rgba(0, 255, 178, 0.5); }
+.feat-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--cyan-dim), transparent 55%);
+  opacity: 0;
+  transition: opacity var(--duration-base);
+  pointer-events: none;
+}
+.feat-card:hover { transform: translateY(-3px); border-color: var(--border-hi); box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45); }
+.feat-card:hover::after { opacity: 1; }
+.feat-card.accent { border-color: rgba(53, 214, 160, 0.22); background: linear-gradient(160deg, rgba(53, 214, 160, 0.04), var(--surface)); }
+.feat-card.accent::after { background: linear-gradient(135deg, var(--green-dim), transparent 55%); }
+.feat-card.accent:hover { border-color: rgba(53, 214, 160, 0.45); }
 .feat-icon {
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: var(--space-5);
-  border-radius: 10px;
+  border-radius: 12px;
 }
 .feat-icon.cyan { background: var(--cyan-dim); border: 1px solid rgba(0, 212, 255, 0.25); }
-.feat-icon.green { background: var(--green-dim); border: 1px solid rgba(0, 255, 178, 0.25); }
-.feat-icon.amber { background: var(--amber-dim); border: 1px solid rgba(255, 184, 0, 0.25); }
-.feat-card h3 { margin-bottom: var(--space-2); font-family: var(--font-heading); font-size: 18px; font-weight: 700; }
-.feat-card p { color: var(--txt-2); font-size: 14px; line-height: 1.65; }
+.feat-icon.green { background: var(--green-dim); border: 1px solid rgba(53, 214, 160, 0.25); }
+.feat-icon.amber { background: var(--amber-dim); border: 1px solid rgba(255, 200, 87, 0.25); }
+.feat-card h3 {
+  position: relative;
+  z-index: 1;
+  margin-bottom: var(--space-3);
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+.feat-card p {
+  position: relative;
+  z-index: 1;
+  color: var(--txt-2);
+  font-size: var(--text-sm);
+  line-height: 1.65;
+}

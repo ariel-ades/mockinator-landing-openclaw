@@ -77,70 +77,86 @@
 <section class="hero">
   <div class="grid-bg"></div>
 
-  <div class="hero-badge fade-up">
-    <span class="dot"></span>
-    Now in public beta
-  </div>
-
-  <h1 class="fade-up delay-1">
-    Mock APIs that think.<br /><em>Ship faster.</em> Every time.
-  </h1>
-
-  <p class="hero-sub fade-up delay-2">
-    Describe an endpoint. Get a live URL, realistic LLM-generated data, and JSON Schema validation — in under 30 seconds. No config files. No local servers.
-  </p>
-
-  <div class="hero-actions fade-up delay-3">
-    <a href="#" class="btn-hero js-open-subscribe-modal">
-      <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="#000" stroke-width="2.5" stroke-linejoin="round"/></svg>
-      Start mocking free
-    </a>
-    <a href="#how" class="btn-hero-ghost">
-      <svg width="17" height="17" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polygon points="10,8 16,12 10,16" fill="currentColor"/></svg>
-      See how it works
-    </a>
-  </div>
-
-  <div class="hero-terminal fade-up delay-4">
-    <div class="terminal-bar">
-      <span class="terminal-dot danger"></span>
-      <span class="terminal-dot warning"></span>
-      <span class="terminal-dot success"></span>
-      <div class="url-bar">
-        <span class="lock">🔒</span>
-        <span>api.mockinator.io/<span id="slug" class="inline-cyan">your-project</span>/users</span>
+  <div class="hero-inner">
+    <!-- Left: content -->
+    <div class="hero-content">
+      <div class="hero-badge fade-up">
+        <span class="dot"></span>
+        Now in public beta
       </div>
-      <div class="terminal-bar-actions">
-        <span class="badge-method badge-get">GET</span>
-        <span class="t-status"><span class="status-dot"></span><span class="status-text">200 OK</span></span>
+
+      <h1 class="fade-up delay-1">
+        Mock APIs that think.<br /><em>Ship faster.</em> Every time.
+      </h1>
+
+      <p class="hero-sub fade-up delay-2">
+        Describe an endpoint. Get a live URL, realistic LLM-generated data, and JSON Schema validation — in under 30 seconds. No config files. No local servers.
+      </p>
+
+      <div class="hero-actions fade-up delay-3">
+        <a href="#" class="btn-hero js-open-subscribe-modal">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="#000" stroke-width="2.5" stroke-linejoin="round"/></svg>
+          Start mocking free
+        </a>
+        <a href="#how" class="btn-hero-ghost">
+          <svg width="17" height="17" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polygon points="10,8 16,12 10,16" fill="currentColor"/></svg>
+          See how it works
+        </a>
+      </div>
+
+      <div class="hero-trust fade-up delay-4">
+        <span>Free to start</span>
+        <span class="hero-trust-dot"></span>
+        <span>No credit card</span>
+        <span class="hero-trust-dot"></span>
+        <span>Live in 30 seconds</span>
       </div>
     </div>
 
-    <div class="terminal-body">
-      <div>
-        <div class="t-col-label">→ LLM-Generated Response</div>
-        <div class="t-code">
-          <span class="t-punct">{</span><br />
-          &nbsp;&nbsp;<span class="t-key">"id"</span><span class="t-punct">:</span> <span class="t-num">42</span><span class="t-punct">,</span><br />
-          &nbsp;&nbsp;<span class="t-key">"name"</span><span class="t-punct">:</span> <span class="t-str">"Sarah Okonkwo"</span><span class="t-punct">,</span><br />
-          &nbsp;&nbsp;<span class="t-key">"email"</span><span class="t-punct">:</span> <span class="t-str">"s.okonkwo@acme.io"</span><span class="t-punct">,</span><br />
-          &nbsp;&nbsp;<span class="t-key">"role"</span><span class="t-punct">:</span> <span class="t-str">"admin"</span><span class="t-punct">,</span><br />
-          &nbsp;&nbsp;<span class="t-key">"verified"</span><span class="t-punct">:</span> <span class="t-bool">true</span><span class="t-punct">,</span><br />
-          &nbsp;&nbsp;<span class="t-key">"created_at"</span><span class="t-punct">:</span> <span class="t-str">"2024-11-02T09:14:00Z"</span><br />
-          <span class="t-punct">}</span>
+    <!-- Right: app window mockup -->
+    <div class="hero-visual fade-up delay-3">
+      <div class="hero-terminal">
+        <div class="terminal-bar">
+          <span class="terminal-dot danger"></span>
+          <span class="terminal-dot warning"></span>
+          <span class="terminal-dot success"></span>
+          <div class="url-bar">
+            <span class="lock">🔒</span>
+            <span>api.mockinator.io/<span id="slug" class="inline-cyan">your-project</span>/users</span>
+          </div>
+          <div class="terminal-bar-actions">
+            <span class="badge-method badge-get">GET</span>
+            <span class="t-status"><span class="status-dot"></span><span class="status-text">200 OK</span></span>
+          </div>
         </div>
-      </div>
-      <div>
-        <div class="t-col-label">✓ JSON Schema Validation</div>
-        <div class="t-code">
-          <span class="t-punct">{</span><br />
-          &nbsp;&nbsp;<span class="t-key">"type"</span><span class="t-punct">:</span> <span class="t-str">"object"</span><span class="t-punct">,</span><br />
-          &nbsp;&nbsp;<span class="t-key">"required"</span><span class="t-punct">:</span> <span class="t-punct">[</span><span class="t-str">"id"</span><span class="t-punct">,</span> <span class="t-str">"email"</span><span class="t-punct">],</span><br />
-          &nbsp;&nbsp;<span class="t-key">"properties"</span><span class="t-punct">: {</span><br />
-          &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-key">"email"</span><span class="t-punct">:</span> <span class="t-punct">{</span> <span class="t-key">"format"</span><span class="t-punct">:</span> <span class="t-str">"email"</span> <span class="t-punct">},</span><br />
-          &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-key">"role"</span><span class="t-punct">:</span> <span class="t-punct">{</span> <span class="t-key">"enum"</span><span class="t-punct">:</span> <span class="t-punct">[</span><span class="t-str">"admin"</span><span class="t-punct">,</span> <span class="t-str">"user"</span><span class="t-punct">]</span> <span class="t-punct">}</span><br />
-          &nbsp;&nbsp;<span class="t-punct">}</span><br />
-          <span class="t-punct">}</span><span class="cursor inline-cyan">▋</span>
+
+        <div class="terminal-body">
+          <div>
+            <div class="t-col-label">→ LLM-Generated Response</div>
+            <div class="t-code">
+              <span class="t-punct">{</span><br />
+              &nbsp;&nbsp;<span class="t-key">"id"</span><span class="t-punct">:</span> <span class="t-num">42</span><span class="t-punct">,</span><br />
+              &nbsp;&nbsp;<span class="t-key">"name"</span><span class="t-punct">:</span> <span class="t-str">"Sarah Okonkwo"</span><span class="t-punct">,</span><br />
+              &nbsp;&nbsp;<span class="t-key">"email"</span><span class="t-punct">:</span> <span class="t-str">"s.okonkwo@acme.io"</span><span class="t-punct">,</span><br />
+              &nbsp;&nbsp;<span class="t-key">"role"</span><span class="t-punct">:</span> <span class="t-str">"admin"</span><span class="t-punct">,</span><br />
+              &nbsp;&nbsp;<span class="t-key">"verified"</span><span class="t-punct">:</span> <span class="t-bool">true</span><span class="t-punct">,</span><br />
+              &nbsp;&nbsp;<span class="t-key">"created_at"</span><span class="t-punct">:</span> <span class="t-str">"2024-11-02T09:14:00Z"</span><br />
+              <span class="t-punct">}</span>
+            </div>
+          </div>
+          <div>
+            <div class="t-col-label">✓ JSON Schema Validation</div>
+            <div class="t-code">
+              <span class="t-punct">{</span><br />
+              &nbsp;&nbsp;<span class="t-key">"type"</span><span class="t-punct">:</span> <span class="t-str">"object"</span><span class="t-punct">,</span><br />
+              &nbsp;&nbsp;<span class="t-key">"required"</span><span class="t-punct">:</span> <span class="t-punct">[</span><span class="t-str">"id"</span><span class="t-punct">,</span> <span class="t-str">"email"</span><span class="t-punct">],</span><br />
+              &nbsp;&nbsp;<span class="t-key">"properties"</span><span class="t-punct">: {</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-key">"email"</span><span class="t-punct">:</span> <span class="t-punct">{</span> <span class="t-key">"format"</span><span class="t-punct">:</span> <span class="t-str">"email"</span> <span class="t-punct">},</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-key">"role"</span><span class="t-punct">:</span> <span class="t-punct">{</span> <span class="t-key">"enum"</span><span class="t-punct">:</span> <span class="t-punct">[</span><span class="t-str">"admin"</span><span class="t-punct">,</span> <span class="t-str">"user"</span><span class="t-punct">]</span> <span class="t-punct">}</span><br />
+              &nbsp;&nbsp;<span class="t-punct">}</span><br />
+              <span class="t-punct">}</span><span class="cursor inline-cyan">▋</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -584,37 +600,66 @@
 
 <!-- ── CTA STRIP ── -->
 <section class="cta-strip">
-  <div class="grid-bg"></div>
-  <h2>Start mocking in <em class="inline-cyan">30 seconds.</em></h2>
-  <p>Join thousands of engineers who've stopped wasting time on config files.</p>
-  <div class="cta-email">
-    <a href="#" class="btn-hero js-open-subscribe-modal">Request early access →</a>
+  <div class="cta-inner">
+    <div class="cta-eyebrow">
+      <span class="hero-badge" style="margin:0;display:inline-flex;"><span class="dot"></span>Free to start</span>
+    </div>
+    <h2>Start mocking in <em>30 seconds.</em></h2>
+    <p>Join engineers who've stopped wasting time on config files, local servers, and fake JSON that drifts.</p>
+    <div class="cta-email">
+      <a href="#" class="btn-hero js-open-subscribe-modal">
+        <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="#000" stroke-width="2.5" stroke-linejoin="round"/></svg>
+        Request early access
+      </a>
+    </div>
+    <p class="cta-meta">No credit card &nbsp;·&nbsp; No install &nbsp;·&nbsp; <span>Cancel whenever</span></p>
   </div>
-  <p class="cta-meta">No credit card. No install. Cancel whenever.</p>
 </section>
 
 <!-- ── FOOTER ── -->
 <footer>
   <div class="footer-left">
-    <a class="nav-logo" href="#">
+    <a class="footer-brand" href="#">
       <svg width="28" height="28" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="36" height="36" rx="9" fill="#0C1220"/>
+        <rect width="36" height="36" rx="9" fill="url(#f-grad)" opacity=".15"/>
         <circle cx="18" cy="10" r="2.5" fill="#00D4FF"/>
         <circle cx="10" cy="22" r="2.5" fill="#00FFB2"/>
         <circle cx="26" cy="22" r="2.5" fill="#00D4FF"/>
-        <circle cx="18" cy="18" r="3" fill="#00FFB2"/>
+        <circle cx="18" cy="18" r="3" fill="url(#f-center)"/>
         <line x1="18" y1="12.5" x2="18" y2="15" stroke="#00D4FF" stroke-width="1.5" stroke-opacity=".7"/>
         <line x1="12" y1="21" x2="15.1" y2="19.1" stroke="#00FFB2" stroke-width="1.5" stroke-opacity=".7"/>
         <line x1="24" y1="21" x2="20.9" y2="19.1" stroke="#00D4FF" stroke-width="1.5" stroke-opacity=".7"/>
         <circle cx="18" cy="18" r="15" stroke="#00D4FF" stroke-width="1" stroke-dasharray="3 3" stroke-opacity=".25"/>
+        <defs>
+          <linearGradient id="f-grad" x1="0" y1="0" x2="36" y2="36">
+            <stop offset="0%" stop-color="#00D4FF"/>
+            <stop offset="100%" stop-color="#00FFB2"/>
+          </linearGradient>
+          <radialGradient id="f-center" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#00FFB2"/>
+            <stop offset="100%" stop-color="#00A3C8"/>
+          </radialGradient>
+        </defs>
       </svg>
-      <span>Mockinator</span>
+      <span class="footer-brand-name">Mockinator</span>
     </a>
     <span class="footer-copy">© 2026 Mockinator. Built for engineers who ship.</span>
   </div>
-  <div class="footer-links">
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
+
+  <div class="footer-center">
+    <span class="footer-status">
+      <span class="footer-status-dot"></span>
+      All systems operational
+    </span>
+  </div>
+
+  <div class="footer-right">
+    <div class="footer-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+    <span class="footer-built">mockinator.io</span>
   </div>
 </footer>
 

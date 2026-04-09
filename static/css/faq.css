@@ -1,11 +1,14 @@
 /* ── FAQ ACCORDION ─────────────────────────────────── */
-.faq-list { display: grid; gap: var(--space-4); margin-top: var(--space-11); }
+.faq-list { display: grid; gap: var(--space-3); margin-top: var(--space-11); }
 .faq-item {
   overflow: hidden;
   border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   background: var(--surface);
+  transition: border-color var(--duration-fast);
 }
+.faq-item:hover { border-color: var(--b2); }
+.faq-item.is-open { border-color: var(--border-hi); }
 .faq-question {
   width: 100%;
   display: flex;
@@ -18,15 +21,18 @@
   color: var(--txt-1);
   cursor: pointer;
   font-family: var(--font-heading);
-  font-size: 19px;
+  font-size: var(--text-base);
   font-weight: 700;
   text-align: left;
+  letter-spacing: -0.3px;
 }
 .faq-question span:last-child {
+  flex-shrink: 0;
   color: var(--cyan);
   font-family: var(--font-mono);
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1;
+  transition: color var(--duration-fast), transform var(--duration-fast);
 }
 .faq-answer {
   display: grid;
@@ -34,6 +40,6 @@
   transition: grid-template-rows var(--duration-base) var(--ease-out);
 }
 .faq-answer-inner { overflow: hidden; }
-.faq-answer p { padding: 0 24px 22px; color: var(--txt-2); font-size: 15px; line-height: 1.75; }
+.faq-answer p { padding: 0 24px 22px; color: var(--txt-2); font-size: var(--text-sm); line-height: 1.75; }
 .faq-item.is-open .faq-answer { grid-template-rows: 1fr; }
 .faq-item.is-open .faq-question span:last-child { color: var(--green); }
