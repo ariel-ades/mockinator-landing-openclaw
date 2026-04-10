@@ -23,10 +23,13 @@
   <link rel="stylesheet" href="css/faq.css" />
   <link rel="stylesheet" href="css/cta.css" />
   <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/metrics.css" />
   <link rel="stylesheet" href="css/modal.css" />
   <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <!-- ── NAV ── -->
 <nav>
@@ -71,10 +74,46 @@
     <a href="#" class="btn-ghost is-disabled" aria-disabled="true" tabindex="-1">Sign in</a>
     <a href="#" class="btn-primary js-open-subscribe-modal">Get started free →</a>
   </div>
+
+  <!-- Hamburger (shown on mobile, hidden on desktop) -->
+  <button
+    class="nav-hamburger"
+    id="nav-hamburger"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+    aria-controls="nav-mobile-overlay"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
 
+<!-- ── MOBILE NAV OVERLAY ── -->
+<div
+  class="nav-mobile-overlay"
+  id="nav-mobile-overlay"
+  role="dialog"
+  aria-label="Navigation menu"
+  hidden
+>
+  <nav class="nav-mobile-links" aria-label="Mobile navigation">
+    <a href="#how">How it works</a>
+    <a href="#features">Features</a>
+    <a href="#compare">Compare</a>
+    <a href="#pricing">Pricing</a>
+  </nav>
+  <div class="nav-mobile-divider"></div>
+  <div class="nav-mobile-cta">
+    <a href="#" class="btn-hero js-open-subscribe-modal">
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="#000" stroke-width="2.5" stroke-linejoin="round"/></svg>
+      Get started free →
+    </a>
+  </div>
+</div>
+
 <!-- ── HERO ── -->
-<section class="hero">
+<section class="hero" id="main-content">
   <div class="grid-bg"></div>
 
   <div class="hero-inner">
@@ -363,6 +402,28 @@
   </div>
 </section>
 
+<!-- ── METRICS BAR ── -->
+<section class="metrics-strip" aria-label="Key metrics">
+  <div class="metrics-inner">
+    <div class="metric-item">
+      <div class="metric-value">2,400+</div>
+      <div class="metric-label">Developers</div>
+    </div>
+    <div class="metric-item">
+      <div class="metric-value">14 M+</div>
+      <div class="metric-label">Mocks served</div>
+    </div>
+    <div class="metric-item">
+      <div class="metric-value">99.9%</div>
+      <div class="metric-label">Uptime</div>
+    </div>
+    <div class="metric-item">
+      <div class="metric-value">&lt; 50ms</div>
+      <div class="metric-label">Avg response</div>
+    </div>
+  </div>
+</section>
+
 <!-- ── COMPARISON ── -->
 <div class="compare-section" id="compare">
   <div class="compare-wrap">
@@ -602,7 +663,7 @@
 <section class="cta-strip">
   <div class="cta-inner">
     <div class="cta-eyebrow">
-      <span class="hero-badge" style="margin:0;display:inline-flex;"><span class="dot"></span>Free to start</span>
+      <span class="dot" aria-hidden="true"></span>Free to start
     </div>
     <h2>Start mocking in <em>30 seconds.</em></h2>
     <p>Join engineers who've stopped wasting time on config files, local servers, and fake JSON that drifts.</p>
@@ -690,5 +751,6 @@
 <script src="js/slug-cycler.js"></script>
 <script src="js/modal.js"></script>
 <script src="js/faq.js"></script>
+<script src="js/nav-mobile.js"></script>
 </body>
 </html>

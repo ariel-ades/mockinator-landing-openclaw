@@ -74,3 +74,81 @@ nav {
   transform: translateY(-1px);
   box-shadow: 0 0 32px rgba(0, 212, 255, 0.48);
 }
+
+/* ── HAMBURGER BUTTON (visible only on mobile via responsive.css) ── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 38px;
+  height: 38px;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--txt-2);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: border-color var(--duration-fast), background var(--duration-fast);
+}
+.nav-hamburger:hover { border-color: var(--b2); background: rgba(255, 255, 255, 0.04); }
+.nav-hamburger:focus-visible { outline: 2px solid rgba(0, 188, 212, 0.5); outline-offset: 2px; }
+.nav-hamburger span {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  background: var(--txt-2);
+  border-radius: 2px;
+  transition: transform var(--duration-fast), opacity var(--duration-fast);
+}
+/* Animated X state when open */
+.nav-hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* ── MOBILE NAV OVERLAY ── */
+.nav-mobile-overlay {
+  position: fixed;
+  inset: 64px 0 0 0;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-6);
+  background: rgba(6, 14, 26, 0.97);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-top: 1px solid var(--border);
+  animation: fadeUp 0.22s var(--ease-out) both;
+  overflow-y: auto;
+}
+.nav-mobile-overlay[hidden] { display: none !important; }
+.nav-mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-bottom: var(--space-6);
+}
+.nav-mobile-links a {
+  display: block;
+  padding: var(--space-4) var(--space-4);
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  color: var(--txt-1);
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  text-decoration: none;
+  transition: background var(--duration-fast), border-color var(--duration-fast), color var(--duration-fast);
+}
+.nav-mobile-links a:hover { background: rgba(255, 255, 255, 0.04); border-color: var(--border); color: var(--cyan); }
+.nav-mobile-links a:focus-visible { outline: 2px solid rgba(0, 188, 212, 0.5); outline-offset: 2px; }
+.nav-mobile-divider { height: 1px; background: var(--border); margin: var(--space-2) 0 var(--space-6); }
+.nav-mobile-cta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.nav-mobile-cta .btn-hero { width: 100%; justify-content: center; }

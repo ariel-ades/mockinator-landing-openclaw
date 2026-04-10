@@ -1,7 +1,7 @@
 /* ── SECURITY SECTION ──────────────────────────────── */
 .security-header {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: space-between;
   gap: var(--space-8);
   flex-wrap: wrap;

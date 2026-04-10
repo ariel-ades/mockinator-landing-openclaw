@@ -1,12 +1,12 @@
 /* ── HERO + TERMINAL MOCKUP ────────────────────────── */
 .hero {
-  min-height: 92vh;
+  min-height: calc(100vh - 64px);
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: center;
   overflow: hidden;
-  padding: 80px 48px 80px;
+  padding: 88px 48px 96px;
 }
 .hero::before {
   content: '';

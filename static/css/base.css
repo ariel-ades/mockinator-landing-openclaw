@@ -1,6 +1,26 @@
 /* ── BASE / RESETS / GLOBALS ───────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
+
+/* ── SKIP-TO-CONTENT LINK ── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-4);
+  z-index: 9999;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  background: var(--cyan);
+  color: var(--black);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: top var(--duration-fast);
+}
+.skip-link:focus { top: var(--space-4); outline: 2px solid var(--cyan-strong); outline-offset: 2px; }
+
 body {
   background: var(--bg);
   color: var(--txt-1);
@@ -82,3 +102,15 @@ section, nav, footer, main { position: relative; z-index: 1; }
 @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes shimmer { from { background-position: -200% center; } to { background-position: 200% center; } }
+
+/* ── REDUCED MOTION SUPPORT ── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .fade-up { animation: none !important; opacity: 1 !important; transform: none !important; }
+  .cursor { animation: none !important; opacity: 1 !important; }
+  .hero-badge .dot { animation: none !important; }
+  .footer-status-dot { animation: none !important; }
+  .cta-eyebrow .dot { animation: none !important; }
+  /* Preserve accordion transition for usability, but keep it instant */
+  .faq-answer { transition: none !important; }
+}
