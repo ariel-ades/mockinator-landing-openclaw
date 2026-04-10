@@ -42,4 +42,7 @@
 .faq-answer-inner { overflow: hidden; }
 .faq-answer p { padding: 0 24px 22px; color: var(--txt-2); font-size: var(--text-sm); line-height: 1.75; }
 .faq-item.is-open .faq-answer { grid-template-rows: 1fr; }
-.faq-item.is-open .faq-question span:last-child { color: var(--green); }
+.faq-item.is-open .faq-question span:last-child {
+  color: var(--green);
+  transform: rotate(45deg);
+}
